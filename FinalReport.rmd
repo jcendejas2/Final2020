@@ -1,7 +1,7 @@
 ---
 title: "Covid91 vaccine study Final2020"
-author: "Put your name here!"
-date: "put the date here"
+author: "Jeannet Cendejas"
+date: "October 27, 2020"
 output: html_document
 ---
 
@@ -19,6 +19,18 @@ FinalData <- OldData %>% mutate(infected = recode(infected, aids = "covid", none
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
 
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine.
+
+$H_O$: The preventative vaccine is not effective in preventing Covid among females.  
+$H_A$: The preventative vaccine is effective in preventing Covid among females.  
+
+$H_O$: The preventative vaccine is not effective in preventing Covid among males.    
+$H_A$: The preventative vaccine is effective in preventing Covid among males.  
+
+$H_O$: The preventative vaccine is not effective in preventing Covid among drug users.    
+$H_A$: The preventative vaccine is effective in preventing Covid among drug users.  
+
+$H_O$: The preventative vaccine is not effective in preventing Covid among LGBTQ community.    
+$H_A$: The preventative vaccine is effective in preventing Covid among LGBTQ community.  
 
 # Methods
 
