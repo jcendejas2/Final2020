@@ -20,17 +20,8 @@ FinalData <- OldData %>% mutate(infected = recode(infected, aids = "covid", none
 
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine.
 
-$H_O$: The preventative vaccine is not effective in preventing Covid among females.  
-$H_A$: The preventative vaccine is effective in preventing Covid among females.  
-
-$H_O$: The preventative vaccine is not effective in preventing Covid among males.    
-$H_A$: The preventative vaccine is effective in preventing Covid among males.  
-
-$H_O$: The preventative vaccine is not effective in preventing Covid among drug users.    
-$H_A$: The preventative vaccine is effective in preventing Covid among drug users.  
-
-$H_O$: The preventative vaccine is not effective in preventing Covid among LGBTQ community.    
-$H_A$: The preventative vaccine is effective in preventing Covid among LGBTQ community.  
+$H_O$: The preventative vaccine has no effect on whether one contracts the virus or not among the target population.    
+$H_A$: The preventative vaccine has an effect on whether one contracts the virus or not among the target population.  
 
 # Methods
 
