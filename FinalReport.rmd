@@ -35,6 +35,8 @@ Every question is of a Cat~Cat.
 
 # Graphical Descriptive Results
 
+## Analysis for Gals
+
 ```{r}
 DataF = filter(FinalData,sex=="gal") 
 barchartGC(~infected + treatment,data=DataF)
@@ -43,6 +45,22 @@ barchartGC(~infected + treatment,data=DataF, type="percent", main="gals")
 ```
 
 Among the females who contracted Covid19, twice as many took the placebo. Therefore, it appears that the vaccine has a positive effect.  
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=DataF)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Among the people who got Covid19 67% took the placebo and 33% took the drug. Among the people who weren't infected 50% took the placebo and 50% took the drug.   
+
+```{r}
+fisher.test(table1)
+```
+
+This chart displays that the p-value is 2.2e-16. This chart also displays that for people who got the vaccine their odds of getting infected was about 0.5 to 1. So they were less likely to get Covid19 if they got the vaccine which means the vaccine is effective.  
+
+## Analysis for Guys
 
 ```{r}
 DataG = filter(FinalData,sex=="guy") 
@@ -54,6 +72,23 @@ barchartGC(~infected + treatment,data=DataG, type="percent", main="guys")
 It appears that the preventative vaccine has a negative effect among the males since they are more likely to contract Covid19 if they get the vaccine.  
 
 ```{r}
+table1 <- xtabs(~infected + treatment, data=DataG)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Among the males who got Covid19 42% took the placebo and 58% took the drug. Among the people who weren't infected 51% took the placebo and 49% took the drug.  
+
+```{r}
+fisher.test(table1)
+```
+
+This chart displays that the p-value is 0.0005801. This chart also displays that for people who got the vaccine their odds of getting infected was about 1.5 to 1. So they were more likely to get Covid19 if they got the vaccine which means the vaccine is not effective.
+
+
+## Analysis for LGBTQ
+
+```{r}
 DataLGBTQ = filter(FinalData,LGBTQ=="gay") 
 barchartGC(~infected + treatment,data=DataLGBTQ)
 barchartGC(~infected + treatment,data=DataLGBTQ, type="percent", main="gay")
@@ -61,13 +96,47 @@ barchartGC(~infected + treatment,data=DataLGBTQ, type="percent", main="gay")
 ```
 
 
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=DataLGBTQ)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+
+```{r}
+fisher.test(table1)
+```
+
+
+
+## Analysis for Drug Users
+
 ```{r}
 DataD = filter(FinalData,DrugUser=="yes") 
 barchartGC(~infected + treatment,data=DataD)
-barchartGC(~infected + treatment,data=DataD, type="percent", main="yes")
+barchartGC(~infected + treatment,data=DataD, type="percent", main="drugusers")
 
 ``` 
+
+
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=DataD)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+
+```{r}
+fisher.test(table1)
+```
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+According to charts and numerical summaries, females that got the vaccine are less likely to get Covid19. Among the people who got Covid19 66.89 took the placebo and 33.11 took the drug. Among the people who weren't infected 49.69 took the placebo and 50.31 took the drug. The inferential chart displays that for people who got the vaccine their odds of getting infected was about 0.5 to 1. So they were less likely to get Covid19 if they got the vaccine which means the vaccine is effective. The p-value is 2.2e-16, which means that we reject the null hypothesis as the preventative vaccine did have an effect in the female population. 
+
+According to charts and numerical summaries, males that got the vaccine are more likely to get Covid19. Among the males who got Covid19 41.84 took the placebo and 58.16 took the drug. Among the males who weren't infected 51.46 took the placebo and 48.54 took the drug. The inferential chart displays that for males who got the vaccine their odds of getting infected was about 1.5 to 1. So they were more likely to get Covid19 if they got the vaccine which means the vaccine is not effective. The p-value is 0.0005801, which means that we reject the null hypothesis as the preventative vaccine had a negative effect in the male population. 
