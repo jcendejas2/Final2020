@@ -103,7 +103,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-Among the gays who got Covid19 29% took the placebo and 71% took the drug. Among the people who weren't infected 51% took the placebo and 49% took the drug.  
+Among the LGBTQ who got Covid19 29% took the placebo and 71% took the drug. Among the people who weren't infected 51% took the placebo and 49% took the drug.  
 
 ```{r}
 fisher.test(table1)
@@ -143,6 +143,6 @@ According to charts and numerical summaries, females that got the vaccine are le
 
 According to charts and numerical summaries, males that got the vaccine are more likely to get Covid19. Among the males who got Covid19 41.84 took the placebo and 58.16 took the drug. Among the males who weren't infected 51.46 took the placebo and 48.54 took the drug. The inferential chart displays that for males who got the vaccine their odds of getting infected was about 1.5 to 1. So they were more likely to get Covid19 if they got the vaccine which means the vaccine is not effective. The p-value is 0.0005801, which means that we reject the null hypothesis as the preventative vaccine had a negative effect in the male population.  
 
-According to charts and numerical summaries, the LGBTQ population that got the vaccine are more likely to get Covid19. Among the gays who got Covid19 29.31 took the placebo and 70.69 took the drug. Among the people who weren't infected 50.83 took the placebo and 49.17 took the drug. The inferential chart displays that for the gays who got the vaccine their odds of getting infected was about 2.5 to 1. So they were more likely to get Covid19 if they got the vaccine which means the vaccine is not effective. The p-value is 5.741e-06, which means that we reject the null hypothesis as the preventative vaccine had a negative effect in the LGBTQ population.  
+According to charts and numerical summaries, the LGBTQ population that got the vaccine are more likely to get Covid19. Among the LGBTQ who got Covid19 29.31 took the placebo and 70.69 took the drug. Among the people who weren't infected 50.83 took the placebo and 49.17 took the drug. The inferential chart displays that for the gays who got the vaccine their odds of getting infected was about 2.5 to 1. So they were more likely to get Covid19 if they got the vaccine which means the vaccine is not effective. The p-value is 5.741e-06, which means that we reject the null hypothesis as the preventative vaccine had a negative effect in the LGBTQ population.  
 
 According to charts and numerical summaries, the drugusers population that got the vaccine are less likely to get Covid19. In this chart it seemed as if the results for the people who were infected and the people who weren't infected, were almost the same. Among the drugusers who got Covid19 66.67 took the placebo and 33.33 took the drug. Among the people who weren't infected 52.17 took the placebo and 47.83 took the drug. The inferential chart displays that for the drugusers who got the vaccine their odds of getting infected was about 0.5 to 1. So they were more likely to get Covid19 if they got the vaccine which means the vaccine is effective. The p-value is 0.002273, which means that we reject the null hypothesis as the preventative vaccine had a positive effect in the drugusers population.  
